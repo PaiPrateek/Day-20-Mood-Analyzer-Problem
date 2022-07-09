@@ -194,7 +194,7 @@ namespace TestProject
         //    string expected = "SAD";
         //    string message = "Iam in Sad Mood";
         //    MoodAnalyse moodAnalyse = new MoodAnalyse(message);
-   
+
         //    //Arrange
         //    string mood = moodAnalyse.AnalyseMood();
 
@@ -204,22 +204,37 @@ namespace TestProject
 
         //}
 
+        //public void Test1()
+        //{
+        //    TC 6.1 - Using reflection invoking the method AnalyseMood by passing message Happy
+
+        //    Act
+        //    string expected = "HAPPY";
+        //    string message = "Happy";
+        //    MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+        //    Arrange
+        //    string mood = moodAnalyse.AnalyseMood();
+
+        //    Assert
+        //    Assert.AreEqual(expected, mood);
+
+        //}
+
         public void Test1()
         {
-            //TC 6.1 - Using reflection invoking the method AnalyseMood by passing message Happy
+            //TC 6.2 - Using reflection invoking the method - Throw exception when passing improper method namer
 
             //Act
-            string expected = "HAPPY";
-            string message = "Happy";
-            MoodAnalyse moodAnalyse = new MoodAnalyse(message);
-
-            //Arrange
-            string mood = moodAnalyse.AnalyseMood();
-
-            //Assert
-            Assert.AreEqual(expected, mood);
-
-
+            string expected = "Method is not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
+            }catch (MoodAnalyserCustomException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+            
         }
     }
 }
