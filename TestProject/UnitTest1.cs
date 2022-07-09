@@ -142,14 +142,30 @@ namespace TestProject
 
         //..........................UC5.....................
         //Testing for Reflection - Improper Constructor should throw exception
+        //public void Test1()
+        //{
+        //    //TC 5.1 - MoodAnalyser Object with Parameter constructor
+        //    object expected = new MoodAnalyse("I a in sad mood");
+
+        //    object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in sad mood");
+
+        //    expected.Equals(obj);
+
+        //}
+
         public void Test1()
         {
-            //TC 5.1 - MoodAnalyser Object with Parameter constructor
-            object expected = new MoodAnalyse("I a in sad mood");
+            //TC 5.2 - While passing imprioper class name should throw Exception
 
-            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in sad mood");
-
-            expected.Equals(obj);
+            string expected = "Class Not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "Iam in sad Mood");
+            }
+            catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
 
         }
     }
