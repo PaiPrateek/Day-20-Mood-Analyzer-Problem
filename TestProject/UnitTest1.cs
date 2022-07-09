@@ -98,22 +98,16 @@ namespace TestProject
 
         //..........................UC4.....................
 
-        //Testing for Reflection 
+        //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
         public void Test1()
         {
-        
+            //TC 4.1
+            string message = null;
+            object expected = new MoodAnalyse(message);
 
-                string message = null;
+            object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            expected.Equals(obj);
 
-                object expected = new MoodAnalyse(message);
-
-
-                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
-                expected.Equals(obj);
-          
-
-
-            
         }
     }
 }

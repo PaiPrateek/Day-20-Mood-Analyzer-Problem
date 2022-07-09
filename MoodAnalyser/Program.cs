@@ -17,7 +17,7 @@ namespace MoodAnalyser
             //MoodAnalyse moodAnalyse = new MoodAnalyse(message);
             //moodAnalyse.AnalyseMood();
 
-
+            //Reflection
             MoodAnalyserFactory moodAnalyserFactory = new MoodAnalyserFactory();
 
             MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
