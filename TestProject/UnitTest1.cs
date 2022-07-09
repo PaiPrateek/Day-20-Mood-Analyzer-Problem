@@ -11,19 +11,33 @@ namespace TestProject
         }
 
         [Test]
+        //public void Test1()
+        //{
+        //    //Act
+        //    string expected = "HAPPY";
+        //    //string message = "I am in any Mood";
+
+        //    MoodAnalyse moodAnalyse = new MoodAnalyse("I am in happy Mood");
+
+        //    //Arrange
+        //    string mood = moodAnalyse.AnalyseMood();
+
+        //    //Assert
+        //    Assert.AreEqual(expected,mood);
+        //}
         public void Test1()
         {
             //Act
             string expected = "HAPPY";
-            //string message = "I am in any Mood";
+            string message = null;
 
-            MoodAnalyse moodAnalyse = new MoodAnalyse("I am in happy Mood");
+            MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
             //Arrange
             string mood = moodAnalyse.AnalyseMood();
 
             //Assert
-            Assert.AreEqual(expected,mood);
+            Assert.AreEqual(expected, mood);
         }
     }
 }
