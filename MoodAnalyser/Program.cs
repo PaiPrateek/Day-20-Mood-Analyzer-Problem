@@ -20,8 +20,8 @@ namespace MoodAnalyser
             //Reflection
             MoodAnalyserFactory moodAnalyserFactory = new MoodAnalyserFactory();
 
-            //Passing Wrong calss name to catch the exception
-            MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            //Improper Constructor throw exception
+            MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
         }
     }
 }

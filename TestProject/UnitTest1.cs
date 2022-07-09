@@ -112,14 +112,29 @@ namespace TestProject
 
 
         //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
+        //public void Test1()
+        //{
+        //    //TC 4.2
+        //    string expected = "Class Not Found";
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+        //    }catch (MoodAnalyserCustomException exception)
+        //    {
+        //        Assert.AreEqual(expected, exception.Message);
+        //    }
+        //}
+
+        //Testing for Reflection - Improper Constructor should throw exception
         public void Test1()
         {
-            //TC 4.2
-            string expected = "Class Not Found";
+            //TC 4.3
+            string expected = "Constructor is Not Found";
             try
             {
-                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
-            }catch (MoodAnalyserCustomException exception)
+                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
+            }
+            catch (MoodAnalyserCustomException exception)
             {
                 Assert.AreEqual(expected, exception.Message);
             }
