@@ -19,7 +19,7 @@ namespace MoodAnalyser
                 try
                 {
                     Assembly executing = Assembly.GetExecutingAssembly();
-                    Type moodAnalyseType = executing.GetType("MoodAnalyser." + className);
+                    Type moodAnalyseType = executing.GetType("MoodAnalyse." + className);
                     Console.WriteLine("Mood Analyser Type is : "+moodAnalyseType);
                     return Activator.CreateInstance(moodAnalyseType);
                 }

@@ -99,15 +99,30 @@ namespace TestProject
         //..........................UC4.....................
 
         //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
+        //public void Test1()
+        //{
+        //    //TC 4.1
+        //    string message = null;
+        //    object expected = new MoodAnalyse(message);
+
+        //    object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+        //    expected.Equals(obj);
+
+        //}
+
+
+        //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
         public void Test1()
         {
-            //TC 4.1
-            string message = null;
-            object expected = new MoodAnalyse(message);
-
-            object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
-            expected.Equals(obj);
-
+            //TC 4.2
+            string expected = "Class Not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            }catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
         }
     }
 }
