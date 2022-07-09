@@ -72,28 +72,48 @@ namespace TestProject
         //}
 
         // Testing for throwing exception for Empty message 
+        //public void Test1()
+        //{
+        //    try
+        //    {
+        //        //Act
+        //        string message = "";
+
+        //        MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+        //        //Arrange
+        //        string mood = moodAnalyse.AnalyseMood();
+        //    }
+        //    catch (MoodAnalyserCustomException ex)
+        //    {
+        //        string expected = "Mood Should not be Empty";
+        //        //Assert
+
+        //        Assert.AreEqual(expected, ex.Message);
+
+        //        Assert.AreEqual(expected, ex.Message);
+
+        //    }
+        //}
+
+        //..........................UC4.....................
+
+        //Testing for Reflection 
         public void Test1()
         {
-            try
-            {
-                //Act
+        
+
                 string message = null;
 
+                object expected = new MoodAnalyse(message);
 
-                MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
-                //Arrange
-                string mood = moodAnalyse.AnalyseMood();
-            }
-            catch (MoodAnalyserCustomException ex)
-            {
-                string expected = "Mood Should Not be Null";
-                //Assert
-                Assert.AreEqual(expected, ex.Message);
+                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+                expected.Equals(obj);
+          
 
-                Assert.AreEqual(expected, ex.Message);
-            }
 
+            
         }
     }
 }
