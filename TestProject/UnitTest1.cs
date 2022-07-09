@@ -221,20 +221,38 @@ namespace TestProject
 
         //}
 
+        //public void Test1()
+        //{
+        //    //TC 6.2 - Using reflection invoking the method - Throw exception when passing improper method namer
+
+        //    //Act
+        //    string expected = "Method is not Found";
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
+        //    }catch (MoodAnalyserCustomException ex)
+        //    {
+        //        Assert.AreEqual(expected, ex.Message);
+        //    }
+            
+        //}
+
         public void Test1()
         {
             //TC 6.2 - Using reflection invoking the method - Throw exception when passing improper method namer
 
             //Act
-            string expected = "Method is not Found";
+            string expected = "Mood Should Not be Null";
+            
             try
             {
-                object obj = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
-            }catch (MoodAnalyserCustomException ex)
+                object obj = MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
+            }
+            catch (MoodAnalyserCustomException ex)
             {
                 Assert.AreEqual(expected, ex.Message);
             }
-            
+
         }
     }
 }
