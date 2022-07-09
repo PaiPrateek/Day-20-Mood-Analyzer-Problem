@@ -47,22 +47,52 @@ namespace TestProject
         //..........................UC3.....................
 
         // Testing for throwing exception for Empty message 
+        //public void Test1()
+        //{
+        //    try
+        //    {
+        //        //Act
+        //        string message = null;
+
+        //        MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+        //        //Arrange
+        //        string mood = moodAnalyse.AnalyseMood();
+        //    } catch (MoodAnalyserCustomException ex)
+        //    {
+        //        string expected = "Mood Should Not be Null";
+        //        //Assert
+
+        //        Assert.AreEqual(expected, ex.Message);
+
+        //        Assert.AreEqual(expected,ex.Message);
+
+        //    }
+
+        //}
+
+        // Testing for throwing exception for Empty message 
         public void Test1()
         {
             try
             {
                 //Act
-                string message = " ";
+                string message = "";
 
                 MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
                 //Arrange
                 string mood = moodAnalyse.AnalyseMood();
-            } catch (MoodAnalyserCustomException ex)
+            }
+            catch (MoodAnalyserCustomException ex)
             {
                 string expected = "Mood Should not be Empty";
                 //Assert
+
                 Assert.AreEqual(expected, ex.Message);
+
+                Assert.AreEqual(expected, ex.Message);
+
             }
 
         }
