@@ -126,18 +126,31 @@ namespace TestProject
         //}
 
         //Testing for Reflection - Improper Constructor should throw exception
+        //public void Test1()
+        //{
+        //    //TC 4.3
+        //    string expected = "Constructor is Not Found";
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
+        //    }
+        //    catch (MoodAnalyserCustomException exception)
+        //    {
+        //        Assert.AreEqual(expected, exception.Message);
+        //    }
+        //}
+
+        //..........................UC5.....................
+        //Testing for Reflection - Improper Constructor should throw exception
         public void Test1()
         {
-            //TC 4.3
-            string expected = "Constructor is Not Found";
-            try
-            {
-                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
-            }
-            catch (MoodAnalyserCustomException exception)
-            {
-                Assert.AreEqual(expected, exception.Message);
-            }
+            //UC5
+            object expected = new MoodAnalyse("I a in Happy mood");
+
+            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in Happy mood");
+
+            expected.Equals(obj);
+
         }
     }
 }
