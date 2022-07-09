@@ -77,7 +77,8 @@ namespace TestProject
             try
             {
                 //Act
-                string message = "";
+                string message = null;
+
 
                 MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
@@ -86,13 +87,11 @@ namespace TestProject
             }
             catch (MoodAnalyserCustomException ex)
             {
-                string expected = "Mood Should not be Empty";
+                string expected = "Mood Should Not be Null";
                 //Assert
-
                 Assert.AreEqual(expected, ex.Message);
 
                 Assert.AreEqual(expected, ex.Message);
-
             }
 
         }
