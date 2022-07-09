@@ -62,7 +62,7 @@ namespace TestProject
             {
                 string expected = "Mood Should not be Empty";
                 //Assert
-                Assert.AreEqual(expected, ex);
+                Assert.AreEqual(expected, ex.Message);
             }
 
         }
