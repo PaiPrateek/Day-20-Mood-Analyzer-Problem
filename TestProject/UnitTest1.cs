@@ -234,25 +234,33 @@ namespace TestProject
         //    {
         //        Assert.AreEqual(expected, ex.Message);
         //    }
-            
+
+        //}
+
+        //public void Test1()
+        //{
+        //    //TC 6.2 - Using reflection invoking the method - Throw exception when passing improper method namer
+
+        //    //Act
+        //    string expected = "Mood Should Not be Null";
+
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
+        //    }
+        //    catch (MoodAnalyserCustomException ex)
+        //    {
+        //        Assert.AreEqual(expected, ex.Message);
+        //    }
+
         //}
 
         public void Test1()
         {
-            //TC 6.2 - Using reflection invoking the method - Throw exception when passing improper method namer
+            //Using reflection to cahnge mood dynamically
 
-            //Act
-            string expected = "Mood Should Not be Null";
-            
-            try
-            {
-                object obj = MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
-            }
-            catch (MoodAnalyserCustomException ex)
-            {
-                Assert.AreEqual(expected, ex.Message);
-            }
-
+            string result = MoodAnalyserFactory.SetField("HAPPY", "message");
+            Assert.AreEqual("HAPPY", result);
         }
     }
 }
