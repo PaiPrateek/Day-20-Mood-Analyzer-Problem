@@ -186,15 +186,33 @@ namespace TestProject
         //}
 
         //..........................UC6.....................
+        //public void Test1()
+        //{
+        //    //UC6 - Using reflection invoking the method AnalyseMood
+
+        //    //Act
+        //    string expected = "SAD";
+        //    string message = "Iam in Sad Mood";
+        //    MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+   
+        //    //Arrange
+        //    string mood = moodAnalyse.AnalyseMood();
+
+        //    //Assert
+        //    Assert.AreEqual(expected, mood);
+
+
+        //}
+
         public void Test1()
         {
-            //UC6 - Using reflection invoking the method AnalyseMood
+            //TC 6.1 - Using reflection invoking the method AnalyseMood by passing message Happy
 
             //Act
-            string expected = "SAD";
-            string message = "Iam in Sad Mood";
+            string expected = "HAPPY";
+            string message = "Happy";
             MoodAnalyse moodAnalyse = new MoodAnalyse(message);
-   
+
             //Arrange
             string mood = moodAnalyse.AnalyseMood();
 
