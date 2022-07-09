@@ -265,19 +265,36 @@ namespace TestProject
         //    Assert.AreEqual("HAPPY", result);
         //}
 
+        //public void Test1()
+        //{
+        //    //TC 7.2 - Throw exception while passing improper field name
+
+        //    string expected = "Field is not Found";
+        //    try
+        //    {
+        //        object obj =  MoodAnalyserFactory.SetField("Happy", "Demo");
+        //    }catch (MoodAnalyserCustomException e)
+        //    {
+        //        Assert.AreEqual(expected, e.Message);
+        //    }
+
+        //}
+
+
         public void Test1()
         {
-            //TC 7.2 - Throw exception while passing improper field name
+            //TC 7.3 - Throw exception while passing Null value
 
-            string expected = "Field is not Found";
+            string expected = "Message should not be null";
             try
             {
-                object obj =  MoodAnalyserFactory.SetField("Happy", "Demo");
-            }catch (MoodAnalyserCustomException e)
+                object obj = MoodAnalyserFactory.SetField(null, "message");
+            }
+            catch (MoodAnalyserCustomException e)
             {
                 Assert.AreEqual(expected, e.Message);
             }
-            
+
         }
     }
 }

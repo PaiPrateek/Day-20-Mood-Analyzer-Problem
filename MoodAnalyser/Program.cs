@@ -45,7 +45,11 @@ namespace MoodAnalyser
             //MoodAnalyserFactory.SetField("Happy", "message");
 
             //Through exception while passing improper Field
-            MoodAnalyserFactory.SetField("Happy", "Demo");
+            //MoodAnalyserFactory.SetField("Happy", "Demo");
+
+            //Through exception while passing null value
+            MoodAnalyserFactory.SetField(null, "message");
+
         }
     }
 }
