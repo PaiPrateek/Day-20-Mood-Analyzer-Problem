@@ -27,7 +27,10 @@ namespace MoodAnalyser
             //MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyser", "MoodAnalyse","I am in Happy mood");
 
             //While passing imprioper constructor name should throw Exception
-            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo","I am in Happy mood");
+            //MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo","I am in Happy mood");
+
+            //Use Reflection to Invoke mood - AnalyseMood
+            MoodAnalyserFactory.InvokeAnalyseMood("Iam in Sad Mood", "AnalyseMood");
         }
     }
 }

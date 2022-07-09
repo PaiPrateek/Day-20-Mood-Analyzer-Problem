@@ -169,19 +169,38 @@ namespace TestProject
 
         //}
 
+        //public void Test1()
+        //{
+        //    //TC 5.3 - While passing improper constructor name should throw Exception
+
+        //    string expected = "Constructor is not found";
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo", "Iam in sad Mood");
+        //    }
+        //    catch (MoodAnalyserCustomException exception)
+        //    {
+        //        Assert.AreEqual(expected, exception.Message);
+        //    }
+
+        //}
+
+        //..........................UC6.....................
         public void Test1()
         {
-            //TC 5.3 - While passing improper constructor name should throw Exception
+            //UC6 - Using reflection invoking the method AnalyseMood
 
-            string expected = "Constructor is not found";
-            try
-            {
-                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo", "Iam in sad Mood");
-            }
-            catch (MoodAnalyserCustomException exception)
-            {
-                Assert.AreEqual(expected, exception.Message);
-            }
+            //Act
+            string expected = "SAD";
+            string message = "Iam in Sad Mood";
+            MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+   
+            //Arrange
+            string mood = moodAnalyse.AnalyseMood();
+
+            //Assert
+            Assert.AreEqual(expected, mood);
+
 
         }
     }
