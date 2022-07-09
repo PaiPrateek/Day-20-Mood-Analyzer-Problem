@@ -13,7 +13,7 @@ namespace MoodAnalyser
             //Passing message in Constructor
             //MoodAnalyse moodAnalyse = new MoodAnalyse("I am in Happy mood");
 
-            string message = null;
+            string message = "";
             MoodAnalyse moodAnalyse = new MoodAnalyse(message);
             moodAnalyse.AnalyseMood();
         }
