@@ -23,7 +23,7 @@ namespace MoodAnalyser
             //Improper Constructor throw exception
             //MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
 
-            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse","I am in sad mood");
+            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse","I am in Happy mood");
         }
     }
 }

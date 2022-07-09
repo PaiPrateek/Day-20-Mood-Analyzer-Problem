@@ -144,10 +144,10 @@ namespace TestProject
         //Testing for Reflection - Improper Constructor should throw exception
         public void Test1()
         {
-            //UC5
-            object expected = new MoodAnalyse("I a in Happy mood");
+            //TC 5.1 - MoodAnalyser Object with Parameter constructor
+            object expected = new MoodAnalyse("I a in sad mood");
 
-            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in Happy mood");
+            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in sad mood");
 
             expected.Equals(obj);
 
