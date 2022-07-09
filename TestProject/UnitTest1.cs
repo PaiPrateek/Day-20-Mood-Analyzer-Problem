@@ -255,9 +255,11 @@ namespace TestProject
 
         //}
 
+        //..........................UC7.....................
+        //
         public void Test1()
         {
-            //Using reflection to cahnge mood dynamically
+            //TC 7.1 - Set Happy message with refglector should return HAPPY
 
             string result = MoodAnalyserFactory.SetField("HAPPY", "message");
             Assert.AreEqual("HAPPY", result);
