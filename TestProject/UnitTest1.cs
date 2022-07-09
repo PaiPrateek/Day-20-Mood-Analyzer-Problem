@@ -153,14 +153,30 @@ namespace TestProject
 
         //}
 
+        //public void Test1()
+        //{
+        //    //TC 5.2 - While passing imprioper class name should throw Exception
+
+        //    string expected = "Class Not Found";
+        //    try
+        //    {
+        //        object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "Iam in sad Mood");
+        //    }
+        //    catch (MoodAnalyserCustomException exception)
+        //    {
+        //        Assert.AreEqual(expected, exception.Message);
+        //    }
+
+        //}
+
         public void Test1()
         {
-            //TC 5.2 - While passing imprioper class name should throw Exception
+            //TC 5.3 - While passing improper constructor name should throw Exception
 
-            string expected = "Class Not Found";
+            string expected = "Constructor is not found";
             try
             {
-                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "Iam in sad Mood");
+                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo", "Iam in sad Mood");
             }
             catch (MoodAnalyserCustomException exception)
             {

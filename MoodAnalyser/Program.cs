@@ -24,7 +24,10 @@ namespace MoodAnalyser
             //MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
 
             //While passing imprioper class name should throw Exception
-            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyser", "MoodAnalyse","I am in Happy mood");
+            //MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyser", "MoodAnalyse","I am in Happy mood");
+
+            //While passing imprioper constructor name should throw Exception
+            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo","I am in Happy mood");
         }
     }
 }
