@@ -14,8 +14,8 @@ namespace TestProject
         public void Test1()
         {
             //Act
-            string expected = "SAD";
-            string message = "I am in sad Mood";
+            string expected = "HAPPY";
+            string message = "I am in any Mood";
 
             MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
