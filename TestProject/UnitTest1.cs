@@ -257,12 +257,27 @@ namespace TestProject
 
         //..........................UC7.....................
         //
+        //public void Test1()
+        //{
+        //    //TC 7.1 - Set Happy message with refglector should return HAPPY
+
+        //    string result = MoodAnalyserFactory.SetField("HAPPY", "message");
+        //    Assert.AreEqual("HAPPY", result);
+        //}
+
         public void Test1()
         {
-            //TC 7.1 - Set Happy message with refglector should return HAPPY
+            //TC 7.2 - Throw exception while passing improper field name
 
-            string result = MoodAnalyserFactory.SetField("HAPPY", "message");
-            Assert.AreEqual("HAPPY", result);
+            string expected = "Field is not Found";
+            try
+            {
+                object obj =  MoodAnalyserFactory.SetField("Happy", "Demo");
+            }catch (MoodAnalyserCustomException e)
+            {
+                Assert.AreEqual(expected, e.Message);
+            }
+            
         }
     }
 }

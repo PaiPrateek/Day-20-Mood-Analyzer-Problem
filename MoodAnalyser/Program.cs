@@ -42,7 +42,10 @@ namespace MoodAnalyser
             //MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
 
             //Use Reflection to change mood dynamically
-            MoodAnalyserFactory.SetField("Happy", "message");
+            //MoodAnalyserFactory.SetField("Happy", "message");
+
+            //Through exception while passing improper Field
+            MoodAnalyserFactory.SetField("Happy", "Demo");
         }
     }
 }
